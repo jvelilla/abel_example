@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-19-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-19-0 http://www.eiffel.com/developers/xml/configuration-1-19-0.xsd" name="abel_mysql" uuid="42DEDD84-83E0-49E9-9C3A-9764E7DEA751">
+	<target name="abel_mysql">
+		<root class="EXAMPLE" feature="make"/>
+		<file_rule>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<exclude>/\.git$</exclude>
+			<exclude>/\.svn$</exclude>
+		</file_rule>
+		<option warning="true">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<library name="abel_connector_mysql" location="$ISE_LIBRARY\unstable\library\persistency\abel\connector_mysql\connector_mysql.ecf" readonly="false"/>
+		<library name="abel_core" location="$ISE_LIBRARY\unstable\library\persistency\abel\core\core.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<cluster name="abel_mysql" location=".\" recursive="true"/>
+	</target>
+</system>
