@@ -69,7 +69,9 @@ feature -- DB actions
 			 -- the argument `a_name` is STRING then ABEL raise an exception
 			 -- PS_QUERY
 			 -- PS_CRITERION.can_handle_type (type: TYPE [detachable ANY]): BOOLEAN
-			create query.make_with_criterion ((create {PS_CRITERION_FACTORY}).new_predefined ("name", {PS_CRITERION_FACTORY}.equals, a_name))
+--			create query.make_with_criterion ((create {PS_CRITERION_FACTORY}).new_predefined ("name", {PS_CRITERION_FACTORY}.equals, a_name))
+			create query.make
+			query.set_criterion (factory ("name", "=", a_name))
 
 			transaction := repository.new_transaction
 
